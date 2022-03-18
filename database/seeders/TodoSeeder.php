@@ -2,21 +2,19 @@
 
 namespace Database\Seeders;
 
+use App\Models\Todo;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class TodoSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call([
-            TodoSeeder::class,
-        ]);
-        // \App\Models\User::factory(10)->create();
+        Todo::factory()->count(300)->create();
     }
 }
